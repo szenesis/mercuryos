@@ -3,10 +3,10 @@
 set -ouex pipefail
 
 # Copy over the base system files
-dnf install -y rsync
+#dnf install -y rsync
 
-rsync -rvl --no-acls --no-xattrs --no-owner --no-group --no-perms \
-  /ctx/system_files/base/ /
+#rsync -rvl --no-acls --no-xattrs --no-owner --no-group --no-perms \
+# /ctx/system_files/base/ /
 #rsync -rvK /ctx/system_files/base/ /
 
 
