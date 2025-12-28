@@ -2,14 +2,6 @@
 
 set -ouex pipefail
 
-# Copy over the base system files
-#dnf install -y rsync
-
-#rsync -rvl --no-acls --no-xattrs --no-owner --no-group --no-perms \
-# /ctx/system_files/base/ /
-#rsync -rvK /ctx/system_files/base/ /
-
-
 
 ### Install packages
 
@@ -19,7 +11,6 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # Install terminal software from fedora repos
-dnf5 install -y tmux
 dnf5 install -y tilix
 dnf5 install -y fish
 dnf5 install -y docker
@@ -51,11 +42,6 @@ EOF
 sed -i "s/enabled=.*/enabled=0/g" /etc/yum.repos.d/vscode.repo
 dnf -y install --enablerepo=code \
     code
-
-
-#Rechunker fix based on Ziconium and Fizzyblue
-chmod +x /usr/bin/rechunker-group-fix
-systemctl enable rechunker-group-fix.service
 
 
 # Use a COPR Example:
