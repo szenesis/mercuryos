@@ -49,6 +49,7 @@ dnf5 remove -y \
  gnome-shell-extension-background-logo \
  gnome-shell-extension-appindicator \
  gnome-extensions-app \
+ gnome-software-rpm-ostree \
 
 # Install VS Code
 tee /etc/yum.repos.d/vscode.repo <<'EOF'
