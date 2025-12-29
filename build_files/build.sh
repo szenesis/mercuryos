@@ -16,10 +16,10 @@ systemctl enable systemd-resolved.service
 mkdir -p /var/roothome
 
 #Flatpak installs
-flatpak install -y com.vivaldi.Vivaldi
+flatpak install -y flathub com.vivaldi.Vivaldi
 
 # Install terminal software from fedora repos
-dnf install -y \ 
+dnf5 install -y \ 
  sakura \
  fish \
  docker \
@@ -28,7 +28,7 @@ dnf install -y \
  
 
 #Remove software that is not needed for workflow.
-dnf remove -y \
+dnf5 remove -y \
  gnome-software \
  gnome-tour \
  gnome-system-monitor \
@@ -38,7 +38,7 @@ dnf remove -y \
  firefox \
 
 #Remove old/retro Gnome extensions
-dnf remove -y \ 
+dnf5 remove -y \ 
  gnome-shell-extension-common \
  gnome-shell-extension-apps-menu- \
  gnome-shell-extension-launch-new-instance \
