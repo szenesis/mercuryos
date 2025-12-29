@@ -16,6 +16,8 @@ systemctl enable systemd-resolved.service
 mkdir -p /var/roothome
 
 #Flatpak installs
+dnf5 install -y flatpak
+flatpak install -y --system flathub org.ublue.bazaar
 flatpak install -y com.vivaldi.Vivaldi
 
 # Install terminal software from fedora repos
