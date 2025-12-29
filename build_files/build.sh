@@ -18,12 +18,14 @@ mkdir -p /var/roothome
 #Make sure flatpak is active
 dnf5 install -y flatpak
 
+# Add Flathub to the image for eventual application (got from Zirconium)
+mkdir -p /etc/flatpak/remotes.d/
+curl --retry 3 -Lo /etc/flatpak/remotes.d/flathub.flatpakrepo https://dl.flathub.org/repo/flathub.flatpakrepo
 
 #Bazaar store
 flatpak remote-add --system --if-not-exists flathub-beta \
   https://flathub.org/beta-repo/flathub-beta.flatpakrepo
-flatpak install -y --system flathub org.ublue.bazaar
-
+flatpak install -y --system flathub-beta org.ublue.bazaar
 
 #Flatpak browser install
 flatpak install -y com.vivaldi.Vivaldi
@@ -122,9 +124,6 @@ EOF
 rm -rf /usr/lib/systemd/system/flatpak-add-fedora-repos.service
 systemctl enable flatpak-add-flathub-repos.service
 
-# Add Flathub to the image for eventual application (got from Zirconium)
-mkdir -p /etc/flatpak/remotes.d/
-curl --retry 3 -Lo /etc/flatpak/remotes.d/flathub.flatpakrepo https://dl.flathub.org/repo/flathub.flatpakrepo
 
 if [ "$(rpm -E "%{fedora}")" == 43 ] ; then
   dnf -y copr enable ublue-os/flatpak-test
