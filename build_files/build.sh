@@ -57,7 +57,7 @@ dnf5 remove -y \
  gnome-shell-extension-background-logo \
  gnome-shell-extension-appindicator \
  gnome-extensions-app \
- gnome-software-rpm-ostree \
+ gnome-software-rpm-ostree
 
 # Install VS Code
 tee /etc/yum.repos.d/vscode.repo <<'EOF'
@@ -121,14 +121,3 @@ EOF
 # Remove annyoing fedora flatpaks
 #rm -rf /usr/lib/systemd/system/flatpak-add-fedora-repos.service
 #systemctl enable flatpak-add-flathub-repos.service
-
-
-if [ "$(rpm -E "%{fedora}")" == 43 ] ; then
-  dnf -y copr enable ublue-os/flatpak-test
-  dnf -y copr disable ublue-os/flatpak-test
-  dnf -y --repo=copr:copr.fedorainfracloud.org:ublue-os:flatpak-test swap flatpak flatpak
-  dnf -y --repo=copr:copr.fedorainfracloud.org:ublue-os:flatpak-test swap flatpak-libs flatpak-libs
-  dnf -y --repo=copr:copr.fedorainfracloud.org:ublue-os:flatpak-test swap flatpak-session-helper flatpak-session-helper
-  rpm -q flatpak --qf "%{NAME} %{VENDOR}\n" | grep ublue-os
-fi
-
