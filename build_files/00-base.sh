@@ -17,12 +17,12 @@ flatpak update --appstream
 flatpak install --system -y flathub com.vivaldi.Vivaldi
 flatpak install --system -y flathub com.mattjakeman.ExtensionManager
 # Remove and cleanup of flatpaks
-# flatpak remove -y \
-# org.gnome.Extensions \
-# org.gnome.Contacts \
-# org.gnome.Maps \
-# org.gnome.Papers \
-# org.gnome.Connections
+ flatpak remove -y \
+ org.gnome.Extensions \
+ org.gnome.Contacts \
+ org.gnome.Maps \
+ org.gnome.Papers \
+ org.gnome.Connections
 # Update packeges just in case
 dnf5 update -y
 # Install terminal software from fedora repos
