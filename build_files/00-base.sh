@@ -9,8 +9,7 @@ mkdir -p /var/roothome
 # Make sure flatpak is active
 dnf5 install -y flatpak
 # Adding flathub remotes
-flatpak remote-add --if-not-exists flathub \
-https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 # Flatpak update remotes
 flatpak update --appstream
 # Flatpak browser and other necesary installs
@@ -72,12 +71,6 @@ dnf5 remove -y \
 
 
 systemctl preset systemd-resolved.service
-
-dnf -y copr enable ublue-os/packages
-dnf -y copr disable ublue-os/packages
-dnf -y --enablerepo copr:copr.fedorainfracloud.org:ublue-os:packages install uupd ublue-os-udev-rules
-
-systemctl enable podman.socket
 
 if [ "$(arch)" != "aarch64" ] ; then
   dnf install -y \
