@@ -14,7 +14,7 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 # Flatpak update remotes
 flatpak update --appstream
 # Flatpak browser and other necesary installs
-flatpak install -y \
+flatpak install --system -y 
  com.vivaldi.Vivaldi \
  com.mattjakeman.ExtensionManager
 # Remove and cleanup of flatpaks
