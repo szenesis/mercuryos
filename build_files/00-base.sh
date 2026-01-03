@@ -6,14 +6,19 @@ systemctl enable systemd-resolved.service
 # See https://github.com/CentOS/centos-bootc/issues/191
 mkdir -p /var/roothome
 
-#Make sure flatpak is active
+# Make sure flatpak is active
 dnf5 install -y flatpak
-#Flatpak browser and other necesary installs
+# Adding flathub remotes
+flatpak remote-add --if-not-exists flathub \
+https://flathub.org/repo/flathub.flatpakrepo
+# Flatpak update remotes
+flatpak update --appstream
+# Flatpak browser and other necesary installs
 flatpak install -y \
- flatbhub com.vivaldi.Vivaldi \
- flathub com.mattjakeman.ExtensionManager
-#Remove and cleanup of flatpaks
-#flatpak remove -y \
+ com.vivaldi.Vivaldi \
+ com.mattjakeman.ExtensionManager
+# Remove and cleanup of flatpaks
+# flatpak remove -y \
  org.gnome.Extensions \
  org.gnome.Contacts \
  org.gnome.Maps \
@@ -28,7 +33,7 @@ dnf5 install -y \
  fastfetch \
  fzf \
  emacs
-#Remove software that is not needed for workflow.
+# Remove software that is not needed for workflow.
 dnf5 remove -y \
  gnome-software \
  gnome-tour \
@@ -38,7 +43,7 @@ dnf5 remove -y \
  nvtop \
  firefox \
  ptyxis
-#Remove old/retro Gnome extensions
+# Remove old/retro Gnome extensions
 dnf5 remove -y \
  gnome-shell-extension-common \
  gnome-shell-extension-apps-menu \
