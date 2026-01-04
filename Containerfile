@@ -10,7 +10,7 @@ COPY cosign.pub /files/etc/pki/containers/mercurium.pub
 #Replace default gnome background
 COPY system_files/usr/share/mercuryos/Pictures/Walls/1471952432939.png /usr/share/backgrounds/
 # Copy dconf defaults
-COPY files/etc/dconf/db /etc/dconf/db
+COPY system_files/etc/dconf/db /etc/dconf/db
 
 # Compile dconf database
 RUN dconf update
