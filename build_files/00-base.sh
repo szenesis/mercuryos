@@ -12,8 +12,8 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 # Flatpak update remotes
 flatpak update --appstream
 # Flatpak browser and other necesary installs (subject to be removed if preinstalls work)
-#flatpak install --system -y flathub com.vivaldi.Vivaldi
-#flatpak install --system -y flathub com.mattjakeman.ExtensionManager
+flatpak install --system -y flathub com.vivaldi.Vivaldi
+flatpak install --system -y flathub com.mattjakeman.ExtensionManager
 
 # Update packeges just in case
 dnf5 update -y
@@ -56,20 +56,6 @@ dnf5 remove -y \
  org.gnome.Maps \
  org.gnome.Papers \
  org.gnome.Connections
-
-# Install VS Code
-#tee /etc/yum.repos.d/vscode.repo <<'EOF'
-#[code]
-#name=Visual Studio Code
-#baseurl=https://packages.microsoft.com/yumrepos/vscode
-#enabled=1
-#gpgcheck=1
-#gpgkey=https://packages.microsoft.com/keys/microsoft.asc
-#EOF
-#sed -i "s/enabled=.*/enabled=0/g" /etc/yum.repos.d/vscode.repo
-#dnf -y install --enablerepo=code \
-#    code
-
 
 systemctl preset systemd-resolved.service
 
