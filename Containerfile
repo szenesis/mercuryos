@@ -9,8 +9,6 @@ COPY --from=ghcr.io/projectbluefin/common:latest /system_files/shared/usr/bin/lu
 COPY cosign.pub /files/etc/pki/containers/mercurium.pub
 #Replace default gnome background
 COPY system_files/usr/share/mercuryos/Pictures/Walls/1471952432939.png /usr/share/backgrounds/
-# Copy dconf defaults
-#COPY system_files/etc/dconf/db /etc/dconf/db
 
 # Base Image
 FROM  quay.io/fedora/fedora-bootc:43
@@ -24,6 +22,14 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
 
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/build/01-cleanup.sh
+
+# Copy recunker service file in first
+COPY build_files/rechunker-group-fix.service /etc/systemd/system/
+
+# Run cleanup script after setting rechuncker
+RUN ./01-cleanup.sh
+
+
 
 RUN rm -rf /var/* && mkdir /var/tmp && bootc container lint
 ## Verify final image and contents are correct (got from Ziconium)
