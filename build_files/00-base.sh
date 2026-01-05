@@ -25,7 +25,7 @@ flatpak install --system -y flathub com.mattjakeman.ExtensionManager
 dnf5 update -y
 # Install terminal software from fedora repos
 dnf5 install -y \
- @gnome-desktop
+ @gnome-desktop \
  foot \
  fish \
  docker \
