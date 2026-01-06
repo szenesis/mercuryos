@@ -27,10 +27,7 @@ COPY system_files/usr/share/mercuryos/pixmaps/MercuryOSlogo.png /usr/share/plymo
 # Set MercuryOS spinner theme as default
 RUN mkdir -p /etc/plymouth && \
     echo -e '[Daemon]\nTheme=mercuryos' > /etc/plymouth/plymouthd.conf
-
-# Optional: rebuild initramfs (Bootc usually handles this in build scripts)
-RUN dracut -f
-      
+    
 RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/build/01-cleanup.sh
 
