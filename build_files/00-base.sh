@@ -21,6 +21,7 @@ flatpak update --appstream
 dnf5 update -y
 # Install terminal software from fedora repos
 dnf5 install -y \
+ -x PackageKit* \
  sakura \
  fish \
  docker \
@@ -54,7 +55,7 @@ dnf5 remove -y \
  gnome-terminal \
  gnome-boxes
 # Remove and cleanup of flatpaks
-flatpak uninstall --delete-data -y \ 
+flatpak uninstall --delete-data -y \
   org.gnome.Extensions \
   org.gnome.Contacts \
   org.gnome.Maps \
