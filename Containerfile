@@ -25,8 +25,7 @@ COPY system_files/usr/share/wallpapers usr/share/backgrounds
 COPY system_files/usr/share/wallpapers/wall1.png /usr/share/backgrounds/wall1.png
 
 #Overriding GSettings schemas directory
-COPY 02-custom-background.gschema.override /usr/share/glib-2.0/schemas/
-
+COPY build_files/02-custom-background.gschema.override /usr/share/glib-2.0/schemas/
 #Recompilig schemas to apply override as the new system default
 RUN glib-compile-schemas /usr/share/glib-2.0/schemas/
 
