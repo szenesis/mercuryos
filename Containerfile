@@ -22,7 +22,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
 #Adding wallpaper
 COPY system_files/usr/share/wallpapers usr/share/backgrounds
 #Placing wallpaper n system backgrounds directory
-COPY wall1.png /usr/share/backgrounds/wall1.png
+COPY system_files/usr/share/wallpapers/wall1.png /usr/share/backgrounds/wall1.png
 
 #Overriding GSettings schemas directory
 COPY 02-custom-background.gschema.override /usr/share/glib-2.0/schemas/
