@@ -19,15 +19,16 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 flatpak update --appstream
 # Update packeges just in case
 dnf5 update -y
-# Install terminal software from fedora repos
+# Install terminal software and caffeine extension
 dnf5 install -y \
- -x PackageKit* \
  sakura \
  docker \
  fzf \
  emacs\
  plymouth \
- plymouth-system-theme
+ plymouth-system-theme \
+ gnome-shell-extension-caffeine
+ # -x PackageKit* \
 # Remove software that is not needed for workflow.
 dnf5 remove -y \
  gnome-software \
