@@ -22,7 +22,6 @@ dnf5 update -y
 # Install terminal software from fedora repos
 dnf5 install -y \
  -x PackageKit* \
- vivaldi
  sakura \
  docker \
  fastfetch \
