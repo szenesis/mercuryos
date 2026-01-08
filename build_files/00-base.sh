@@ -75,7 +75,7 @@ for app in $APPS; do
     flatpak uninstall --delete-data -y "$app"
   fi
 done
-#Vivaldi Browser by default
+#Vivaldi Browser flatpak by default
 flatpak install -y flathub com.vivaldi.Vivaldi
 
 systemctl preset systemd-resolved.service
