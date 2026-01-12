@@ -1,6 +1,6 @@
 [org.gnome.desktop.background]
-picture-uri='file:///usr/share/backgrounds/sailormercury.png'
-picture-uri-dark='file:///usr/share/backgrounds/wall1.png'
+picture-uri='file:///var/home/<user>/Pictures/sailormercury.png'
+picture-uri-dark='file:///var/home/<user>/Pictures/wall1.png'
 
 [org.gnome.desktop.screensaver]
-picture-uri='file:///usr/share/backgrounds/wall1.png'
+picture-uri='file:///var/home/<user>/Pictures/wall1.png'

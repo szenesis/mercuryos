@@ -20,7 +20,7 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/build/00-base.sh
 
 #Adding wallpaper
-COPY system_files/usr/share/wallpapers usr/share/backgrounds/gnome
+COPY system_files/usr/share/wallpapers /var/home/<user>/Pictures
 #Overriding GSettings schemas directory
 COPY build_files/02-custom-background.gschema.override /usr/share/glib-2.0/schemas/
 #Recompilig schemas to apply override as the new system default
