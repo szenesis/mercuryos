@@ -13,7 +13,8 @@ sudo bootc switch ghcr.io/szenesis/mercuryos:latest'
 
 ## Features 
 - No store, only flatpak through terminal
-- Nano an Emacs as it's only text editors
+- Emacs by default
+- VI removed in favor of Emacs
 - Striped down Gnome Desktop Environment
 - Sakura terminal for simplicity
 - Docker for containers
