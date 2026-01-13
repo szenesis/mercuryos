@@ -3,6 +3,8 @@
 A custom Opinionated bootc image based on Fedora Silveblue bootc image. <br>
 The main goal is a simple system without any extras to use for daily and not work intensive tasks.<br>
 
+---
+
 ## Usage
 To use simpleply rebase from any existing bootc system using: <br>
 sudo bootc switch ghcr.io/szenesis/mercuryos:latest'
@@ -29,5 +31,4 @@ NVIDIA support is not included and will never arrive as that is too much of a ha
 
 Thanks to Fedora and people of Project Bluefin.<br>
 
-Special thanks to developers of Zirconium and XeniaOS <br>
-as both served as an inspiration for this project.
+Special thanks to developers of Zirconium and XeniaOS as both served as an inspiration for this project.
