@@ -39,7 +39,8 @@ dnf5 remove -y \
  firefox \
  fish \
  fastfetch \
- ptyxis
+ ptyxis \
+ vim-minimal
 # Remove old/retro Gnome extensions
 dnf5 remove -y \
  gnome-shell-extension-common \
