@@ -20,9 +20,11 @@ RUN --mount=type=bind,from=ctx,source=/,target=/ctx \
     /ctx/build/00-base.sh
 
 # Adding szenfetch (my custom fetch tool)
-ADD https://raw.githubusercontent.com/szenesis/szenfetch/main/szenfetch.sh /usr/local/bin/szenfetch
-RUN chmod +x /usr/local/bin/szenfetch
-
+RUN git clone --depth 1 https://github.com/szenesis/szenfetch /opt/szenfetch \
+    && chmod +x /opt/szenfetch/install.sh \
+    && /opt/szenfetch/install.sh
+# Add szenfetch to PATH
+ENV PATH="/opt/szenfetch:${PATH}"
 # Adding wallpaper
 COPY system_files/usr/share/wallpapers /var/home/<user>/Pictures
 # Overriding GSettings schemas directory
