@@ -1,5 +1,5 @@
 A custom Opinionated bootc image with striped down Gnome Desktop Environment.
-No store only flatpak through terminal.
+No store, only flatpak through terminal.
 With nano an Emacs as it's only text editors.
 
 The image is not meant to be used as a gaming system.
