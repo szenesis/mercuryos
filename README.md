@@ -4,7 +4,6 @@ A custom Opinionated bootc image based on Fedora Silveblue bootc image. <br>
 The main goal is a simple system without any extras to use for daily and not work intensive tasks.<br>
 
 ## Usage
----
 To use simpleply rebase from any existing bootc system using: <br>
 sudo bootc switch ghcr.io/szenesis/mercuryos:latest'
 ---
