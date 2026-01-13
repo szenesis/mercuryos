@@ -78,7 +78,6 @@ for app in $APPS; do
     flatpak mask "$app"
   fi
 done
-
 systemctl preset systemd-resolved.service
 
 if [ "$(arch)" != "aarch64" ] ; then
