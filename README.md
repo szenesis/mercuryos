@@ -5,16 +5,15 @@ The main goal is a simple system without any extras to use for daily and not wor
 
 ## Usage
 ---
-## Rebase
 To use simpleply rebase from any existing bootc system using: <br>
-'sudo bootc switch ghcr.io/szenesis/mercuryos:latest'
+sudo bootc switch ghcr.io/szenesis/mercuryos:latest'
 ---
 ## Features 
--No store, only flatpak through terminal.
--Nano an Emacs as it's only text editors.
--Striped down Gnome Desktop Environment
--Sakura terminal for simplicity
--Docker for containers
+- No store, only flatpak through terminal.
+- Nano an Emacs as it's only text editors.
+- Striped down Gnome Desktop Environment
+- Sakura terminal for simplicity
+- Docker for containers
 ---
 ## Notice:
 For the time being there is no iso with installer. This might change later.
