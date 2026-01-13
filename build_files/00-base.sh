@@ -73,8 +73,9 @@ org.gnome.TextEditor
 org.fedoraproject.MediaWriter
 "
 for app in $APPS; do
-  if flatpak info "$app" >/dev/null 2>&1; then
-    flatpak uninstall --delete-data -y "$app"
+  if flatpak info --system "$app" >/dev/null 2>&1; then
+    flatpak uninstall --system --delete-data -y "$app"
+    flatpak mask "$app"
   fi
 done
 
