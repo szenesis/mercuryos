@@ -7,7 +7,7 @@ The main goal is a simple system without any extras to use for daily and not wor
 
 ## Usage
 To use simpleply rebase from any existing bootc system using: <br>
-sudo bootc switch ghcr.io/szenesis/mercuryos:latest'
+sudo bootc switch ghcr.io/szenesis/mercuryos:latest
 
 ---
 
