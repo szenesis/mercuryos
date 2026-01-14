@@ -9,7 +9,6 @@ COPY --from=ghcr.io/projectbluefin/common:latest /system_files/shared/usr/bin/lu
 COPY cosign.pub /files/etc/pki/containers/mercurium.pub
 
 # Base Image
-#FROM  quay.io/fedora/fedora-bootc:43
 FROM  quay.io/fedora/fedora-silverblue:latest
 ARG BUILD_FLAVOR="${BUILD_FLAVOR:-}"
 
