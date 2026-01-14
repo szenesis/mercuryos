@@ -6,7 +6,7 @@ The main goal is a simple system without any extras to use for daily and not wor
 ---
 
 ## Usage
-To use simply rebase from any existing bootc system using: <br>
+To use simply rebase from any existing fedora bootc system using: <br>
 sudo bootc switch ghcr.io/szenesis/mercuryos:latest
 
 ---
