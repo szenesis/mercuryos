@@ -26,6 +26,9 @@ For the time being there is no iso with installer. This might change later.
 The image is not meant to be used for gaming, it can be used for gaming with AMD graphics.
 NVIDIA support is not included and will never arrive as that is too much of a hassle to implement and deal with.
 
+For a better experience it is recomended to also use szenfetch.
+https://github.com/szenesis/szenfetch
+
 ---
 
 ## Credits <br>

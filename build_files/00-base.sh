@@ -9,7 +9,6 @@ systemctl enable systemd-resolved.service
 export HOME=/var/root
 mkdir -p "$HOME/.local/share"
 
-
 # Make sure flatpak is active
 dnf5 install -y flatpak
 # Adding flathub remotes
