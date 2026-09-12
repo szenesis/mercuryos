@@ -72,7 +72,7 @@ org.gnome.TextEditor
 org.fedoraproject.MediaWriter
 "
 # Default Bazzar Store Integration
-flatpak install --system flathub io.github.kolunmi.Bazaar
+flatpak install --system flathub io.github.kolunmi.Bazaar -y
 
 for app in $APPS; do
   if flatpak info --system "$app" >/dev/null 2>&1; then
