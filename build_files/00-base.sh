@@ -71,6 +71,9 @@ org.gnome.Weather
 org.gnome.TextEditor
 org.fedoraproject.MediaWriter
 "
+# Default Bazzar Store Integration
+flatpak install flathub io.github.kolunmi.Bazaar
+
 for app in $APPS; do
   if flatpak info --system "$app" >/dev/null 2>&1; then
     flatpak uninstall --system --delete-data -y "$app"
