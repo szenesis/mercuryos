@@ -88,4 +88,4 @@ if [ "$(arch)" != "aarch64" ] ; then
 fi
 
 # Default Bazzar Store Integration
-flatpak install --system flathub io.github.kolunmi.Bazaar -y
+flatpak install --system --noninteractive --location=/usr/share/flatpak flathub io.github.kolunmi.Bazaar
