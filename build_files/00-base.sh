@@ -71,8 +71,6 @@ org.gnome.Weather
 org.gnome.TextEditor
 org.fedoraproject.MediaWriter
 "
-# Default Bazzar Store Integration
-flatpak install --system flathub io.github.kolunmi.Bazaar -y
 
 for app in $APPS; do
   if flatpak info --system "$app" >/dev/null 2>&1; then
@@ -80,6 +78,7 @@ for app in $APPS; do
     flatpak mask "$app"
   fi
 done
+
 systemctl preset systemd-resolved.service
 
 if [ "$(arch)" != "aarch64" ] ; then
@@ -87,3 +86,6 @@ if [ "$(arch)" != "aarch64" ] ; then
     virtualbox-guest-additions \
     thermald
 fi
+
+# Default Bazzar Store Integration
+flatpak install --system flathub io.github.kolunmi.Bazaar -y
